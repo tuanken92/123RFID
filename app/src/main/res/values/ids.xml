@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="readers_list" type="id"/>
+    <item name="application" type="id"/>
+    <item name="profiles" type="id"/>
+    <item name="advanced_options" type="id"/>
+    <item name="regulatory" type="id"/>
+    <item name="battery" type="id"/>
+    <item name="beeper" type="id"/>
+    <item name="led" type="id"/>
+    <item name="antenna" type="id"/>
+    <item name="singulation_control" type="id"/>
+    <item name="start_stop_triggers" type="id"/>
+    <item name="tag_reporting" type="id"/>
+    <item name="save_configuration" type="id"/>
+    <item name="power_management" type="id"/>
+</resources>

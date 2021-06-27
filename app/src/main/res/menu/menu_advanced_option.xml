@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_adv_op"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="@string/action_advanced_op"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_inventory"
+        android:icon="@drawable/btn_inv1"
+        android:title="@string/action_inventory"
+        app:showAsAction="always" />
+</menu>

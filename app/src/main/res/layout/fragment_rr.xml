@@ -1,0 +1,253 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.rapidread.RapidReadFragment">
+
+    <!-- <TextView
+         android:id="@+id/tv_prefilter_enabled"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textSize="8dp"
+         android:gravity="center"
+         android:textColor="#ff0000"
+         android:text="Pre filter is enabled"/>
+ -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+
+            <include layout="@layout/matching_progress_view"></include>
+
+            <ImageView
+                android:id="@+id/fab_prefilter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/fab_margin"
+                android:onClick="filterClicked"
+                android:src="@drawable/ic_nav_filter"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/batchModeRR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="@dimen/default_padding"
+                android:text="@string/batch_mode_inventory_title" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/inventoryDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/totalTagTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/rr_total_tag_title"
+                    android:textSize="@dimen/rapid_read_small_title_font" />
+
+                <TextView
+                    android:id="@+id/totalTagContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="888888888"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="60sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uniqueTagTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/rr_unique_tags_title"
+                    android:textSize="@dimen/rapid_read_small_title_font" />
+
+                <TextView
+                    android:id="@+id/uniqueTagContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="60sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/inventoryDataLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/readRateTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/rr_read_rate_title"
+                android:textSize="@dimen/rapid_read_small_title_font" />
+
+            <TextView
+                android:id="@+id/readRateContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="8888"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="45sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/readRateContent"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="5dp"
+                android:text="tags/second"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/readTimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/rr_read_time_title"
+                android:textSize="@dimen/rapid_read_small_title_font" />
+
+            <TextView
+                android:id="@+id/readTimeContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_left_margin"
+                android:layout_marginRight="@dimen/default_right_margin"
+                android:gravity="center"
+                android:text="88:88:88"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/rr_inventoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="inventoryStartOrStop"
+            app:backgroundTint="#008080"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/bt_clear"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/rr_inventoryButton"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_prefilter_enabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/rr_inventoryButton"
+            android:text="Pre filter is enabled"
+            android:gravity="center"
+            android:textColor="#8F8888"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

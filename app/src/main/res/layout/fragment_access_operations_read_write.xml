@@ -1,0 +1,189 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    tools:context="com.zebra.rfidreader.demo.access_operations.AccessOperationsReadWriteFragment">
+
+    <LinearLayout
+        style="@style/base_layout_style"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <include
+            android:id="@+id/accessRWTagID"
+            layout="@layout/autocomplete_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_left_padding" />
+
+        <LinearLayout
+            android:id="@+id/PasswordMemTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_left_padding">
+
+            <LinearLayout
+                android:id="@+id/accessRWPasswordRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/accessRWPasswordTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|bottom"
+                    android:text="@string/password_title" />
+
+                <include
+                    android:id="@+id/accessRWPassword"
+                    style="@style/style_normal_font"
+                    layout="@layout/custom_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accessRWMemoryBankRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/accessRWMemoryBankTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|bottom"
+                    android:text="@string/memory_bank_title" />
+
+                <Spinner
+                    android:id="@+id/accessRWMemoryBank"
+                    style="@style/style_default_spinner"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/accessRWAdvanceOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/accessRWOffsetRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/accessRWOffsetTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/offset_title" />
+
+                <EditText
+                    android:id="@+id/accessRWOffsetValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accessRWLengthRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/accessRWLengthTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/length_title" />
+
+                <EditText
+                    android:id="@+id/accessRWLengthValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingTop="5dp"
+                    android:text="0" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_normal_font"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/default_left_padding"
+                android:text="@string/data_title" />
+
+            <EditText
+                android:id="@+id/accessRWData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters|textNoSuggestions|textMultiLine"
+                android:paddingLeft="@dimen/default_left_padding" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/accessRWButtonsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/accessRWReadButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:onClick="accessOperationsReadClicked"
+                android:text="@string/read_title" />
+
+            <Button
+                android:id="@+id/accessRWWriteButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="accessOperationsWriteClicked"
+                android:text="@string/write_title" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

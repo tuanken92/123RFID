@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:layout_marginTop="@dimen/default_top_margin"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.reader_connection.ReadersListFragment">
+
+    <TextView
+        android:id="@+id/bondedReadersTitle"
+        style="@style/style_normal_font"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="left"
+        android:text="@string/available_readers_title" />
+
+    <include layout="@layout/title_divider" />
+
+    <EditText
+        android:id="@+id/et_barcodevalue"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="gone"
+
+        />
+
+    <!--  android:enabled="false"
+      android:focusable="false"
+      android:focusableInTouchMode="false"-->
+
+    <ListView
+        android:id="@+id/bondedReadersList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="95"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.25dp" />
+
+    <TextView
+        android:id="@+id/empty"
+        style="@style/style_medium_font"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="95"
+        android:padding="@dimen/default_padding"
+        android:text="@string/none_paired"
+        android:visibility="gone" />
+
+
+</LinearLayout>

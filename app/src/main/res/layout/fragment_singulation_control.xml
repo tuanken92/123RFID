@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.settings.SingulationControlFragment">
+
+    <TableRow
+        android:id="@+id/singulationControlRow1"
+        style="@style/table_row_layout_style">
+
+        <TextView
+            android:id="@+id/sessionTitle"
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="40"
+            android:text="@string/session_title" />
+
+        <Spinner
+            android:id="@+id/session"
+            style="@style/style_default_spinner"
+            android:layout_margin="0dp"
+            android:layout_weight="60">
+
+        </Spinner>
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TableRow
+        android:id="@+id/singulationControlRow2"
+        style="@style/table_row_layout_style">
+
+        <TextView
+            android:id="@+id/tagPopulationTitle"
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="40"
+            android:text="@string/tag_population_title" />
+
+        <Spinner
+            android:id="@+id/tagPopulation"
+            style="@style/style_default_spinner"
+            android:layout_margin="0dp"
+            android:layout_weight="60">
+
+        </Spinner>
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TableRow
+        android:id="@+id/singulationControlRow3"
+        style="@style/table_row_layout_style">
+
+        <TextView
+            android:id="@+id/inventoryStateTitle"
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="40"
+            android:text="@string/inv_state_title" />
+
+        <Spinner
+            android:id="@+id/inventoryState"
+            style="@style/style_default_spinner"
+            android:layout_margin="0dp"
+            android:layout_weight="60">
+
+        </Spinner>
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TableRow
+        android:id="@+id/singulationControlRow4"
+        style="@style/table_row_layout_style">
+
+        <TextView
+            android:id="@+id/slFlagTitle"
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="40"
+            android:text="@string/sl_flag_title" />
+
+        <Spinner
+            android:id="@+id/slFlag"
+            style="@style/style_default_spinner"
+            android:layout_margin="0dp"
+            android:layout_weight="60">
+
+        </Spinner>
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TextView
+        android:id="@+id/tv_preFilterEnabled"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:gravity="bottom|center"
+        android:text="Pre Filter option is enabled" />
+
+</LinearLayout>

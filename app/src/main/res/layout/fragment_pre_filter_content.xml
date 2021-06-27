@@ -1,0 +1,160 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    tools:context="com.zebra.rfidreader.demo.settings.PreFilter1ContentFragment">
+
+    <LinearLayout
+        style="@style/base_layout_style"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/preFilterTagID"
+            layout="@layout/autocomplete_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/prefilter1AdvancedOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="25">
+
+                <TableRow
+                    android:id="@+id/preFilterMemoryBankRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/preFilterMemoryBankTitle"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:gravity="left|bottom"
+                        android:text="@string/memory_bank_title" />
+
+                    <Spinner
+                        android:id="@+id/preFilterMemoryBank"
+                        style="@style/style_default_spinner"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_gravity="top"
+                        android:layout_margin="0dp"
+                        android:layout_weight="60" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/preFilterOffsetRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+					android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/preFilterOffsetTitle"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:gravity="left|bottom"
+                        android:text="@string/offset_bits_title" />
+
+                    <EditText
+                        android:id="@+id/preFilterOffset"
+                        style="@style/style_normal_font"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_gravity="top"
+                        android:layout_weight="60"
+                        android:gravity="center"
+                        android:inputType="number" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/preFilterActionRow"
+					android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/preFilterActionTitle"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:gravity="left|center"
+                        android:text="@string/action_title" />
+
+                    <Spinner
+                        android:id="@+id/preFilterAction"
+                        style="@style/style_default_spinner"
+                        android:layout_margin="0dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="60" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/preFilterTargetRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/preFilterTargetTitle"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:gravity="left|bottom"
+                        android:text="@string/target_title" />
+
+                    <Spinner
+                        android:id="@+id/preFilterTarget"
+                        style="@style/style_default_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:layout_weight="60" />
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_top_margin"
+            android:layout_weight="20"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/preFilterEnableFilterTitle"
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:gravity="left"
+                android:text="@string/enable_filter_1" />
+
+            <CheckBox
+                android:id="@+id/preFilterEnableFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35"
+                android:text="" />
+        </TableRow>
+    </LinearLayout>
+</ScrollView>

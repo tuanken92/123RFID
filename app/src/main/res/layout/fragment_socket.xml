@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.SocketFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/socket_fragment" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Socket TCP/IP"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/holo_blue_dark" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextIPServer"
+                android:layout_width="300dp"
+                android:layout_height="66dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:hint="Ip server (127.0.0.1:8888)"
+                android:textColorHint="#7C7575"
+                android:inputType="textNoSuggestions|text|textCapCharacters"
+                android:selectAllOnFocus="false"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnConnectServer"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="Connect"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextDataToSend"
+                android:layout_width="300dp"
+                android:layout_height="66dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:hint="Hi John"
+                android:textColorHint="#7C7575"
+                android:inputType="textNoSuggestions"
+                android:selectAllOnFocus="false"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnSendData"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="Send"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/socket_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="status: null"
+                android:textColor="@android:color/black"
+                />
+
+            <Button
+                android:id="@+id/btnClearData"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_above="@id/socket_status"
+                android:textColor="@color/white"
+                android:text="Clear" />
+
+            <ListView
+                android:id="@+id/list_receive_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/socket_status"
+                android:layout_above="@id/btnClearData"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentTop="true"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/black">
+            </ListView>
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,340 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zebra.rfidreader.demo.settings.ApplicationSettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/readerSettingsTitle"
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:text="@string/reader_conn_sett" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:id="@+id/autoReconnectReadersRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/autoReconnectReadersTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:checked="true"
+                    android:gravity="left"
+                    android:text="@string/auto_reconnect_reader" />
+
+                <CheckBox
+                    android:id="@+id/autoReconnectReaders"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="15"
+                    android:gravity="left" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/notificationSettingsTitle"
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="bottom"
+                android:text="@string/notification_settings" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:id="@+id/readerAvailableRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/readerAvailableTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/readers_available" />
+
+                <CheckBox
+                    android:id="@+id/readerAvailable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow
+                android:id="@+id/readerConnectionRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/readerConnectionTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/readers_connection" />
+
+                <CheckBox
+                    android:id="@+id/readerConnection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow
+                android:id="@+id/readerBatteryRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/readerBatteryTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/reader_battery_status" />
+
+                <CheckBox
+                    android:id="@+id/readerBattery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="left" />
+            </TableRow>
+
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="bottom"
+                android:text="@string/export_data_sett" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:id="@+id/autoDetectReadersRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/export_data" />
+
+                <CheckBox
+                    android:id="@+id/exportData"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="left" />
+            </TableRow>
+
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="bottom"
+                android:text="@string/match_mode" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:id="@+id/tagListMatchModeRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/tag_list_match_mode" />
+
+                <CheckBox
+                    android:id="@+id/tagListMatchMode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow
+                android:id="@+id/tagListMatchTagNamesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/tag_list_match_tag_names" />
+
+                <CheckBox
+                    android:id="@+id/tagListMatchTagNames"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="true"
+                    android:gravity="left" />
+            </TableRow>
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="bottom"
+                android:text="@string/global_settings" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:id="@+id/AsciiModeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/enable_ascii_mode" />
+
+                <CheckBox
+                    android:id="@+id/asciiMode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="left" />
+            </TableRow>
+            <include layout="@layout/title_divider" />
+
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/tag_socket_setting" />
+
+
+                <Spinner
+                    android:id="@+id/socket_mode"
+                    android:layout_gravity="right"
+                    android:layout_width="150dp"
+                    android:entries="@array/socket_mode_array"
+                    android:layout_height="40dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="100dp"
+
+                    android:layout_height="22dp"
+                    android:gravity="left"
+                    android:text="IP" />
+
+
+                <EditText
+                    android:id="@+id/ip_socket"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number|numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="192.168.1.111"
+                    android:textColorHint="#7C7575"
+
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="100dp"
+
+                    android:gravity="left"
+                    android:text="Port" />
+
+
+                <EditText
+                    android:id="@+id/port_socket"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="auto"
+                    android:hint="8888"
+                    android:textColorHint="#7C7575"
+                    android:inputType="number"
+
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+            </TableRow>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

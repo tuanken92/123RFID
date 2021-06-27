@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context="com.zebra.rfidreader.demo.settings.AntennaSettingsFragment">
+
+    <TableRow
+        android:id="@+id/singulationControlRow1"
+        style="@style/table_row_layout_style">
+
+        <TextView
+            android:id="@+id/sessionTitle"
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="50"
+            android:text="@string/power_level_title" />
+
+        <EditText
+            android:id="@+id/powerLevel"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:inputType="number" />
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+
+    <TableRow
+        android:id="@+id/singulationControlRow2"
+        style="@style/table_row_layout_style">
+
+        <TextView
+            android:id="@+id/linkProfileTitle"
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="50"
+            android:text="@string/link_profile_title" />
+
+        <Spinner
+            android:id="@+id/linkProfile"
+            style="@style/style_default_spinner"
+            android:layout_margin="0dp"
+            android:layout_weight="50" />
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TableRow style="@style/table_row_layout_style">
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="50"
+            android:text="@string/PIE_title" />
+
+        <Spinner
+            android:id="@+id/PIE"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:gravity="center" />
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TableRow style="@style/table_row_layout_style">
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="50"
+            android:text="@string/tari_title" />
+
+        <Spinner
+            android:id="@+id/tari"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:inputType="number" />
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+</LinearLayout>
+

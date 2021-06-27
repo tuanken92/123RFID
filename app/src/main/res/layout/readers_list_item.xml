@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/reader_list_item_padding"
+    android:orientation="vertical">
+    <CheckedTextView
+        android:id="@+id/reader_checkedtextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        />
+    <LinearLayout
+        android:id="@+id/reader_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                style="@style/style_small_font"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:gravity="left"
+                android:text="@string/title_serial" />
+            <TextView
+                style="@style/style_small_font"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:text="@string/colon" />
+            <TextView
+                android:id="@+id/tv_serial"
+                style="@style/style_small_font"
+                android:layout_width="0dp"
+                android:layout_weight="70"
+                android:gravity="left" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/autoDetectReadersRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/autoDetectReadersTitle"
+                style="@style/style_small_font"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:gravity="left"
+                android:text="@string/title_model" />
+            <TextView
+                style="@style/style_small_font"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:text="@string/colon" />
+            <TextView
+                android:id="@+id/tv_model"
+                style="@style/style_small_font"
+                android:layout_width="0dp"
+                android:layout_weight="70"
+                android:gravity="left"/>
+        </TableRow>
+
+
+    </LinearLayout>
+    </LinearLayout>

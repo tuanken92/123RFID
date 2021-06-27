@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_margin"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:layout_marginRight="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:focusedByDefault="true"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/contentSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/content"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/profileSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#D7E3F4"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/contentDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#008080" />
+
+        <TableRow
+            android:id="@+id/antennaControlRow1"
+            style="@style/table_row_layout_profiles">
+
+            <TextView
+                android:id="@+id/powerLevelTitle"
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="30"
+                android:text="@string/power_level_title" />
+
+            <EditText
+                android:id="@+id/powerLevelProfile"
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="5dp"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/linkProfileControlRow2"
+            style="@style/table_row_layout_profiles">
+
+            <TextView
+                android:id="@+id/linkProfileTitle"
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="30"
+                android:text="@string/link_profile_title" />
+
+            <Spinner
+                android:id="@+id/linkProfile"
+                style="@style/style_default_spinner"
+                android:layout_gravity="end"
+                android:layout_margin="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="30"
+                android:gravity="center" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/singulationControlRow1"
+            style="@style/table_row_layout_profiles">
+
+            <TextView
+                android:id="@+id/sessionTitle"
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="30"
+                android:text="@string/session_title" />
+
+            <Spinner
+                android:id="@+id/session"
+                style="@style/style_default_spinner"
+                android:layout_gravity="end"
+                android:layout_margin="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="30"
+                android:gravity="center">
+
+            </Spinner>
+
+        </TableRow>
+
+        <TableRow
+            style="@style/table_row_layout_profiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="50"
+                android:text="@string/dynamic_power_title" />
+
+            <CheckBox
+                android:id="@+id/dynamicPower"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="5dp"
+                android:layout_weight="20"
+                android:gravity="center" />
+        </TableRow>
+
+        <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<Button-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="50"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:text="RESTORE">-->
+        <!--</Button>-->
+
+        <!--<Button-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="50"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="SAVE"></Button>-->
+        <!--</TableRow>-->
+    </LinearLayout>
+</LinearLayout>

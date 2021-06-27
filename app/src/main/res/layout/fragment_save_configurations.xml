@@ -1,0 +1,773 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    tools:context="com.zebra.rfidreader.demo.settings.SaveConfigurationsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="77"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            //Antenna settings
+
+            <TextView
+                style="@style/save_config_background"
+                android:gravity="center_vertical"
+                android:text="@string/save_antenna_title" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/save_antenna_power" />
+
+                <TextView
+                    android:id="@+id/antennaPower"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/save_link_profile" />
+
+                <TextView
+                    android:id="@+id/saveLinkProfile"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+            //Singulation control configuration details
+
+            <TextView
+                style="@style/save_config_background"
+                android:gravity="center_vertical"
+                android:text="@string/save_singulation_title" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/save_seesion" />
+
+                <TextView
+                    android:id="@+id/saveSession"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/tag_population_title" />
+
+                <TextView
+                    android:id="@+id/tagPopulation"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/inv_state_title" />
+
+                <TextView
+                    android:id="@+id/invState"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/sl_flag_title" />
+
+                <TextView
+                    android:id="@+id/saveSlFlag"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+            //Tag Reporting details
+
+            <TextView
+                style="@style/save_config_background"
+                android:gravity="center_vertical"
+                android:text="@string/save_tag_report_title" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    android:id="@+id/incPCTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="45"
+                    android:gravity="left"
+                    android:text="@string/pc" />
+
+                <TextView
+                    android:id="@+id/saveIncPC"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/off" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    android:id="@+id/incRSSITitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="45"
+                    android:gravity="left"
+                    android:text="@string/rssi" />
+
+                <TextView
+                    android:id="@+id/saveIncRSSI"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/off" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    android:id="@+id/incPhaseTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="45"
+                    android:gravity="left"
+                    android:text="@string/phase" />
+
+                <TextView
+                    android:id="@+id/saveIncPhase"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/off" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    android:id="@+id/incChannelTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="45"
+                    android:gravity="left"
+                    android:text="@string/channel_index" />
+
+                <TextView
+                    android:id="@+id/saveIncChannel"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/off" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="45"
+                    android:gravity="left"
+                    android:text="@string/tag_seen_count" />
+
+                <TextView
+                    android:id="@+id/saveIncTagSeenCount"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/off" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="45"
+                    android:gravity="left"
+                    android:text="@string/report_unique_tags" />
+
+                <TextView
+                    android:id="@+id/reportUniqueTags"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/off" />
+            </TableRow>
+            // Batch mode detail
+
+            <TextView
+                style="@style/save_config_background"
+                android:gravity="center_vertical"
+                android:text="@string/save_config_batch_mode_title" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/batch_mode_title" />
+
+                <TextView
+                    android:id="@+id/savebatchMode"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/off" />
+            </TableRow>
+            //Power management detail
+
+            <TextView
+                style="@style/save_config_background"
+                android:gravity="center_vertical"
+                android:text="@string/save_dpo_title" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/dynamic_power_title" />
+
+                <TextView
+                    android:id="@+id/saveDPO"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+            //start \ stop trigger details
+
+            <TextView
+                style="@style/save_config_background"
+                android:gravity="center_vertical"
+                android:text="@string/save_start_stop_title" />
+
+
+            //start trigger details
+
+            <!-- <TextView
+                 style="@style/style_medium_font"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/default_top_margin"
+                 android:paddingLeft="@dimen/default_left_padding"
+                 android:text="@string/start" />
+
+             <include layout="@layout/title_divider" />-->
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/start_trigger_title" />
+
+                <TextView
+                    android:id="@+id/saveStartTrigger"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <LinearLayout
+                android:id="@+id/saveStartPeriodicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableRow style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/periodic_title" />
+
+                    <TextView
+                        android:id="@+id/saveStartPeriodic"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/saveStartHandheldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableRow
+                    android:id="@+id/saveStartTriggerReleasedRow"
+                    style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/start_trigger_released_title" />
+
+                    <TextView
+                        android:id="@+id/saveStartTriggerReleased"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+
+                <TableRow
+                    android:id="@+id/saveStartTriggerPressedRow"
+                    style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/start_trigger_pressed" />
+
+                    <TextView
+                        android:id="@+id/saveStartTriggerPressed"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+
+            </LinearLayout>
+
+            //stop trigger
+
+            <!--  <TextView
+                  style="@style/style_medium_font"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/default_top_margin"
+                  android:paddingLeft="@dimen/default_left_padding"
+                  android:text="@string/stop_title" />
+
+              <include layout="@layout/title_divider" />
+  -->
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/stop_trigger_title" />
+
+                <TextView
+                    android:id="@+id/saveStopTrigger"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <LinearLayout
+                android:id="@+id/saveStopDurationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableRow style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/duration_title" />
+
+                    <TextView
+                        android:id="@+id/saveStopDuration"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/saveStopHandheldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableRow
+                    android:id="@+id/saveStopTriggerReleasedRow"
+                    style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        android:id="@+id/saveStopTriggerReleasedTitle"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/stop_trigger_released" />
+
+                    <TextView
+                        android:id="@+id/saveStopTriggerReleased"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+
+                <TableRow
+                    android:id="@+id/saveStopTriggerPressedRow"
+                    style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/stop_trigger_pressed" />
+
+                    <TextView
+                        android:id="@+id/saveStopTriggerPressed"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/saveStopTagObserveLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableRow style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/stop_trigger_tag_observation" />
+
+                    <TextView
+                        android:id="@+id/saveStopTagObserve"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/saveStopNObserveAttemptsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableRow style="@style/save_config_setting_detail_background">
+
+                    <TextView
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="45"
+                        android:gravity="center_vertical"
+                        android:text="@string/stop_trigger_attempts" />
+
+                    <TextView
+                        android:id="@+id/saveStopNObserveAttempts"
+                        style="@style/style_normal_font"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="right|center_vertical" />
+                </TableRow>
+
+                <include layout="@layout/normal_divider" />
+            </LinearLayout>
+
+            <TableRow
+                android:id="@+id/saveStopTimeOutLayout"
+                style="@style/save_config_setting_detail_background"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/stop_trigger_timeout" />
+
+                <TextView
+                    android:id="@+id/saveStopTimeOut"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            //Beeper settings
+
+            <TextView
+                style="@style/save_config_background"
+                android:gravity="center_vertical"
+                android:text="@string/save_beeper_title" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/sled_beeper_title" />
+
+                <TextView
+                    android:id="@+id/saveSledBeeper"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/host_beeper_title" />
+
+                <TextView
+                    android:id="@+id/saveHostBeeper"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow style="@style/save_config_setting_detail_background">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:gravity="center_vertical"
+                    android:text="@string/save_sled_beeper_volume_title" />
+
+                <TextView
+                    android:id="@+id/saveSledBeeperVolume"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="55"
+                    android:gravity="right|center_vertical" />
+            </TableRow>
+
+            //Regulatory settings
+            <!--
+                        <TextView
+                            style="@style/save_config_background"
+                            android:gravity="center_vertical"
+                            android:text="@string/save_regulatory_title" />
+
+                        <TableRow style="@style/save_config_setting_detail_background">
+
+                            <TextView
+                                style="@style/style_normal_font"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="45"
+                                android:gravity="center_vertical"
+                                android:text="@string/region_title" />
+
+                            <TextView
+                                android:id="@+id/saveRegion"
+                                style="@style/style_normal_font"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="55"
+                                android:gravity="right|center_vertical" />
+                        </TableRow>
+            -->
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/saveConfigButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:onClick="saveConfigClicked"
+        android:text="@string/save_to_sled" />
+</LinearLayout>
+
+
+

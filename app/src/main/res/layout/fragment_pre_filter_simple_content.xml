@@ -1,0 +1,99 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:isScrollContainer="true">
+
+    <LinearLayout
+        style="@style/base_layout_style"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/preFilterTagIDSimple"
+            layout="@layout/autocomplete_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/preFilterSimpleOffset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="left"
+                android:text="Offset" />
+
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preFilterSimpleOffset"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/textViewLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekBar"
+                android:layout_margin="5dp"
+                android:text="Length" />
+
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/seekBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewLength"
+                android:layout_margin="5dp" />
+
+        </RelativeLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_top_margin"
+            android:layout_weight="5"
+            android:gravity="top">
+
+            <TextView
+                android:id="@+id/preFilterEnableNonMatchingFilterTitleSimple"
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:gravity="left"
+                android:text="@string/enable_nom_filter_1" />
+
+            <CheckBox
+                android:id="@+id/preFilterEnableNonMatchingFilterSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_top_margin"
+            android:layout_weight="30">
+
+            <TextView
+                android:id="@+id/preFilterEnableFilterTitleSimple"
+                style="@style/style_normal_font"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:gravity="left"
+                android:text="Enable Filter" />
+
+            <CheckBox
+                android:id="@+id/preFilterEnableFilterSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="" />
+        </TableRow>
+    </LinearLayout>
+</ScrollView>

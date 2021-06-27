@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.settings.RegulatorySettingsFragment">
+
+    <TextView
+        android:id="@+id/regulatorySettingsCurrentRegion"
+        style="@style/style_normal_font"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="bottom"
+        android:text="@string/region_title" />
+
+    <include layout="@layout/title_divider" />
+
+    <Spinner
+        android:id="@+id/currentRegionSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/default_bottom_margin"
+        android:layout_weight="10" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/regulatorySettingsChannelSelectionTitle"
+        style="@style/style_normal_font"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="left"
+        android:text="@string/channel_selection" />
+
+    <include layout="@layout/title_divider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45">
+
+        <LinearLayout
+            android:id="@+id/regChannelCheckBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18">
+
+        <TextView
+            style="@style/style_red_font"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/selectCountryWarningText"
+            android:gravity="center"
+            android:text="@string/warning_title" />
+
+        <TextView
+            android:id="@+id/selectCountryWarningText"
+            style="@style/style_red_font"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:text="@string/country_selection_warning" />
+    </RelativeLayout>
+
+</LinearLayout>
+

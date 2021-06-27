@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.settings.BeeperFragment">
+
+    <TableRow
+        android:id="@+id/sledBeeperRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_bottom_margin"
+        android:layout_marginTop="@dimen/default_top_margin"
+        android:gravity="center">
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_weight="85"
+            android:gravity="left"
+            android:text="@string/sled_beeper_title" />
+
+        <CheckBox
+            android:id="@+id/sledBeeper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15" />
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TableRow
+        android:id="@+id/hostBeeperRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_bottom_margin"
+        android:layout_marginTop="@dimen/default_top_margin"
+        android:gravity="center">
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_weight="85"
+            android:gravity="left"
+            android:text="@string/host_beeper_title" />
+
+        <CheckBox
+            android:id="@+id/hostBeeper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15" />
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_bottom_margin"
+        android:layout_marginTop="@dimen/default_top_margin">
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/beeper_volume_title" />
+
+        <Spinner
+            android:id="@+id/volumeSpinner"
+            style="@style/style_default_spinner"
+            android:layout_margin="0dp"
+            android:layout_weight="1" />
+
+    </TableRow>
+
+    <include layout="@layout/normal_divider" />
+
+</LinearLayout>
+
+
+

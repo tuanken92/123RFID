@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.home.AboutFragment">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        style="@style/style_medium_font"
+        android:text="@string/RFID_demo_app" />
+
+    <TextView
+        android:id="@+id/companyTitle"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="top|center_horizontal"
+        style="@style/style_medium_font"
+        android:text="@string/moto_solutions" />
+
+    <include layout="@layout/title_divider" />
+
+    <TableRow
+        android:id="@+id/appVersionRow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:gravity="left|center_vertical">
+
+        <TextView
+            android:id="@+id/appVersionTitle"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_weight="45"
+            style="@style/style_normal_font"
+            android:text="@string/app_version_title" />
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/colon" />
+
+        <TextView
+            android:id="@+id/appVersion"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="50"
+            style="@style/style_normal_font"
+            android:text="@string/app_version" />
+    </TableRow>
+
+    <include layout="@layout/title_divider" />
+
+    <TextView
+        android:id="@+id/sledTitle"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="7"
+        android:gravity="top|center_horizontal"
+        style="@style/style_medium_font"
+        android:text="@string/rfid_sled" />
+
+    <TableRow
+        android:id="@+id/moduleVersionRow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/moduleVersionTitle"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_weight="45"
+            style="@style/style_normal_font"
+            android:text="@string/module_version" />
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/colon" />
+
+        <TextView
+            android:id="@+id/moduleVersion"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="50"
+            style="@style/style_normal_font" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/radioVersionRow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="5"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/radioVersionTitle"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_weight="45"
+            style="@style/style_normal_font"
+            android:text="@string/radio_version" />
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/colon" />
+
+        <TextView
+            android:id="@+id/radioVersion"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="50"
+            style="@style/style_normal_font" />
+    </TableRow>
+
+    <include layout="@layout/title_divider" />
+
+    <TextView
+        android:id="@+id/copyRight"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:gravity="center"
+        style="@style/style_large_font"
+        android:text="@string/copyright_info" />
+
+</LinearLayout>
+
+
+

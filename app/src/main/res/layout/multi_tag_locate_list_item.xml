@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text_wrap"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@+id/tagData"
+            style="@style/style_multitag_locate_inventory_list_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:text="FBFBFBFBFBFBFBFBFBFBFBFB"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tagCount"
+            style="@style/style_multitag_locate_inventory_list_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="16"
+            android:layout_gravity="center_vertical"
+            android:text="12345"
+            android:gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp">
+
+        <ProgressBar
+            android:id="@+id/tagProxiPercent_progressBar"
+            style="@style/style_multitag_locate_progressbar_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="86"
+            android:max="100"
+            android:progressTint="@color/colorAccent"
+            android:progressBackgroundTint="@color/light_grey"/>
+
+        <TextView
+            android:id="@+id/tagProxiPerenct"
+            style="@style/style_multitag_locate_inventory_list_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:layout_gravity="center_vertical"
+            android:text="12345"
+            android:gravity="right" />
+    </LinearLayout>
+
+</LinearLayout>

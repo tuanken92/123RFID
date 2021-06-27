@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/rr_base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.locate_tag.SingleTagLocateFragment">
+
+    <include
+        android:id="@+id/lt_et_epc"
+        style="@style/style_medium_font"
+        layout="@layout/autocomplete_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.zebra.rfidreader.demo.locate_tag.RangeGraph
+            android:id="@+id/locationBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="locationingButtonClicked"
+        app:backgroundTint="#0066ff"
+        app:srcCompat="@android:drawable/ic_media_play" />
+</LinearLayout>
+
+
+
+

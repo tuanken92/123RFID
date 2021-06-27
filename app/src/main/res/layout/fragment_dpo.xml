@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.settings.DPOSettingsFragment">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_top_margin"
+        android:layout_marginBottom="@dimen/default_bottom_margin"
+        >
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="0dp"
+            android:layout_weight="85"
+            android:layout_gravity="center_vertical"
+            android:text="@string/dynamic_power_title" />
+
+        <CheckBox
+            android:id="@+id/dynamicPower"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"/>
+    </TableRow>
+    <include layout="@layout/normal_divider" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            style="@style/style_dark_green_font"
+            android:layout_gravity="bottom"
+            android:text="@string/dpo_message_title" />
+     </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.settings.LedFragment">
+
+    <TextView
+        style="@style/style_medium_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/led_settings_title" />
+
+    <include layout="@layout/title_divider" />
+
+    <TableRow
+        android:id="@+id/ledsupportrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13">
+
+        <TextView
+            style="@style/style_normal_font"
+            android:layout_width="wrap_content"
+            android:layout_weight="85"
+            android:gravity="left"
+            android:paddingTop="20dp"
+            android:text="@string/led_subtitle"
+            android:textSize="16dp" />
+
+        <CheckBox
+            android:id="@+id/checkboxled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15" />
+    </TableRow>
+
+</LinearLayout>
+
+
+

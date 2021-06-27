@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zebra.rfidreader.demo.activities.MainActivity">
+
+    <!-- Search Widget -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_locate"
+        android:icon="@drawable/btn_locate2"
+        android:title="@string/action_locate"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_read_write"
+        android:icon="@drawable/btn_access1"
+        android:title="@string/action_tag_read_write"
+        app:showAsAction="always" />
+</menu>

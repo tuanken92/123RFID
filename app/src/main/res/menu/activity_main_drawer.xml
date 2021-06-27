@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_rapidread"
+            android:icon="@drawable/ic_nav_rr"
+            android:title="Rapid Read" />
+        <item
+            android:id="@+id/nav_inventory"
+            android:icon="@drawable/ic_nav_inv"
+            android:title="Inventory" />
+        <item
+            android:id="@+id/nav_locatetag"
+            android:icon="@drawable/ic_nav_loc"
+            android:title="Locate Tag" />
+        <item
+            android:id="@+id/nav_access_control"
+            android:icon="@drawable/ic_nav_access"
+            android:title="@string/tag_write" />
+        <item
+            android:id="@+id/nav_profiles"
+            android:icon="@drawable/ic_list_profiles"
+            android:title="Profiles" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_nav_sett"
+            android:title="Settings" />
+
+        <item
+            android:id="@+id/nav_prefilters"
+            android:icon="@drawable/ic_nav_filter"
+            android:title="Pre Filters" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_action_about"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_socket"
+            android:icon="@drawable/wifi_icon"
+            android:title="Socket" />
+    </group>
+
+</menu>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_rr"
+            style="@style/DashboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:drawableTop="@drawable/btn_rr"
+            android:onClick="rrClicked"
+            android:paddingTop="@dimen/default_top_padding"
+            android:layout_marginTop="@dimen/home_icon_margin_2"
+            android:layout_marginLeft="@dimen/home_icon_margin_2"
+            android:layout_marginRight="@dimen/home_icon_margin_1"
+            android:layout_marginBottom="@dimen/home_icon_margin_1"
+            android:text="@string/home_rapid_read" />
+
+        <Button
+            android:id="@+id/btn_inv"
+            style="@style/DashboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:drawableTop="@drawable/btn_inv"
+            android:gravity="center_horizontal|top"
+            android:onClick="invClicked"
+            android:paddingTop="10dp"
+            android:layout_marginTop="@dimen/home_icon_margin_2"
+            android:layout_marginLeft="@dimen/home_icon_margin_1"
+            android:layout_marginRight="@dimen/home_icon_margin_2"
+            android:layout_marginBottom="@dimen/home_icon_margin_1"
+            android:text="@string/home_inventory" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_locate"
+            style="@style/DashboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:drawableTop="@drawable/btn_locate"
+            android:onClick="locateClicked"
+            android:paddingTop="10dp"
+            android:layout_marginTop="@dimen/home_icon_margin_1"
+            android:layout_marginLeft="@dimen/home_icon_margin_2"
+            android:layout_marginRight="@dimen/home_icon_margin_1"
+            android:layout_marginBottom="@dimen/home_icon_margin_1"
+            android:text="@string/home_locate" />
+
+        <Button
+            android:id="@+id/btn_sett"
+            style="@style/DashboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:drawableTop="@drawable/btn_sett"
+            android:onClick="settClicked"
+            android:paddingTop="10dp"
+            android:layout_marginTop="@dimen/home_icon_margin_1"
+            android:layout_marginLeft="@dimen/home_icon_margin_1"
+            android:layout_marginRight="@dimen/home_icon_margin_2"
+            android:layout_marginBottom="@dimen/home_icon_margin_1"
+            android:text="@string/home_settings" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_access"
+            style="@style/DashboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:drawableTop="@drawable/btn_access"
+            android:onClick="accessClicked"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:layout_marginTop="@dimen/home_icon_margin_1"
+            android:layout_marginLeft="@dimen/home_icon_margin_2"
+            android:layout_marginRight="@dimen/home_icon_margin_1"
+            android:layout_marginBottom="@dimen/home_icon_margin_2"
+            android:text="@string/tag_write" />
+
+        <Button
+            android:id="@+id/btn_filter"
+            style="@style/DashboardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:drawableTop="@drawable/btn_filter"
+            android:onClick="filterClicked"
+            android:paddingTop="5dp"
+            android:layout_marginTop="@dimen/home_icon_margin_1"
+            android:layout_marginLeft="@dimen/home_icon_margin_1"
+            android:layout_marginRight="@dimen/home_icon_margin_2"
+            android:layout_marginBottom="@dimen/home_icon_margin_2"
+            android:text="@string/home_filter" />
+    </LinearLayout>
+
+</LinearLayout>

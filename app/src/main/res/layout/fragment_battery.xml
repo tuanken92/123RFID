@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_layout_style"
+    android:orientation="vertical"
+    tools:context="com.zebra.rfidreader.demo.settings.BatteryFragment">
+
+    <TextView
+        android:id="@+id/batteryLevelText"
+        style="@style/style_green_font"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/default_top_margin"
+        android:layout_weight="5"
+        android:text="@string/battery_percentage_text" />
+
+
+    <ImageView
+        android:id="@+id/batteryLevelImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/default_margin"
+        android:layout_weight="75"
+        android:contentDescription="@string/battery_level_desc"
+        android:src="@drawable/battery_level" />
+
+    <TextView
+        android:id="@+id/batteryStatusText"
+        style="@style/style_grey_font"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="center_horizontal"
+        android:text="@string/battery_no_active_connection_message" />
+
+</LinearLayout>
+
+
+

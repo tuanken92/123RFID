@@ -1,0 +1,326 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/base_layout_style"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="10"
+
+                android:gravity="bottom"
+                android:text="@string/tag_report_settings_title" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:id="@+id/incPCRow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/incPCTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/pc" />
+
+                <CheckBox
+                    android:id="@+id/incPC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="false"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow
+                android:id="@+id/incRSSIRow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/incRSSITitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/rssi" />
+
+                <CheckBox
+                    android:id="@+id/incRSSI"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="false"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow
+                android:id="@+id/incPhaseRow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/incPhaseTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/phase" />
+
+                <CheckBox
+                    android:id="@+id/incPhase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="false"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow
+                android:id="@+id/incChannelRow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/incChannelTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/channel_index" />
+
+                <CheckBox
+                    android:id="@+id/incChannel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="false"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TableRow
+                android:id="@+id/incTagSeenRow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/incTagSeenTitle"
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/tag_seen_count" />
+
+                <CheckBox
+                    android:id="@+id/incTagSeen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="false"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="10"
+                android:gravity="bottom"
+                android:text="@string/batch_mode_settings_title" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow style="@style/table_row_layout_style">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="40"
+                    android:text="@string/batch_mode_title" />
+
+                <Spinner
+                    android:id="@+id/batchMode"
+                    style="@style/style_default_spinner"
+                    android:layout_margin="0dp"
+                    android:layout_weight="60">
+
+                </Spinner>
+
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="10"
+                android:gravity="bottom"
+                android:text="@string/unique_tag_settings" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="@string/unique_tag_reads" />
+
+                <CheckBox
+                    android:id="@+id/beepOnUniqueTag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="false"
+                    android:gravity="left" />
+            </TableRow>
+
+
+            <TextView
+                style="@style/style_medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="10"
+                android:gravity="bottom"
+                android:text="NXP BrandID Check" />
+
+            <include layout="@layout/title_divider" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_weight="85"
+                    android:gravity="left"
+                    android:text="Check BrandID" />
+
+                <CheckBox
+                    android:id="@+id/brandIDCheck"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:checked="false"
+                    android:gravity="left" />
+            </TableRow>
+
+            <include layout="@layout/normal_divider" />
+            <!--     <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                     android:layout_weight="10" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Brand ID" />
+
+                <EditText
+                    android:id="@+id/brandidET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="0123456789ABCDEF"
+                    android:gravity="center"
+
+                    android:inputType="textCapCharacters"
+                    android:maxLength="4" />
+
+
+            </LinearLayout>
+
+            <include layout="@layout/normal_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    style="@style/style_normal_font"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="EPC Length" />
+
+                <EditText
+                    android:id="@+id/epcET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:text="12" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>
+
+

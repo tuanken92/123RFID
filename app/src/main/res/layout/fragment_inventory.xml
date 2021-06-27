@@ -1,0 +1,251 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/inventoryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.zebra.rfidreader.demo.home.MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15">
+
+            <LinearLayout
+                android:id="@+id/inventoryDataLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryLight"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/inventorySpinnerText"
+                        style="@style/style_very_small_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_left_padding"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="@string/inv_filter_title" />
+
+                    <Spinner
+                        android:id="@+id/inventoryOptions"
+                        style="@style/style_default_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/uniqueTags"
+                        style="@style/style_very_small_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/inv_unique_title" />
+
+                    <TextView
+                        android:id="@+id/inventoryUniqueText"
+                        style="@style/style_large_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="9999" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="25"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totalReads"
+                        style="@style/style_very_small_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/inv_count_title" />
+
+                    <TextView
+                        android:id="@+id/inventoryCountText"
+                        style="@style/style_large_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="9999999" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/fab_prefilter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dp"
+                android:onClick="filterClicked"
+                android:src="@drawable/ic_nav_filter"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/inventoryHeaderRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical"
+
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    style="@style/style_small_font"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="80"
+                    android:text="TAG" />
+
+                <TextView
+                    style="@style/style_small_font"
+                    android:layout_width="0dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="16"
+                    android:paddingLeft="5dp"
+                    android:text="Count" />
+
+                <TextView
+                    android:id="@+id/rssiColumnHeader"
+                    style="@style/style_small_font"
+                    android:layout_width="0dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="13"
+                    android:paddingLeft="5dp"
+                    android:text="RSSI" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="0.25dip"
+            android:background="@color/light_grey" />
+
+        <ListView
+            android:id="@+id/inventoryList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="20dp"
+            android:layout_weight="74" />
+
+        <TextView
+            android:id="@+id/batchModeInventoryList"
+            style="@style/style_medium_font"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="74"
+            android:gravity="center"
+            android:padding="@dimen/default_padding"
+            android:text="@string/batch_mode_inventory_title"
+            android:textColor="@color/dark_grey"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/inventoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/default_margin"
+            android:onClick="inventoryStartOrStop"
+            app:backgroundTint="#008080"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+       <!-- <android.support.v7.widget.AppCompatButton
+            android:id="@+id/bt_clear"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/inventoryButton"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:textSize="15dp" /-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/matchModeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_toRightOf="@id/inventoryButton"
+            android:onClick="inventoryStartOrStop"
+            app:backgroundTint="#008080"
+            app:srcCompat="@drawable/ic_btn_add" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_toRightOf="@id/matchModeButton"
+            android:onClick="inventoryStartOrStop"
+            app:backgroundTint="#008080"
+            app:srcCompat="@drawable/ic_btn_reset" />
+
+        <TextView
+            android:id="@+id/tv_prefilter_enabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inventoryButton"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Pre filter is enabled"
+            android:textColor="#8F8888"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
