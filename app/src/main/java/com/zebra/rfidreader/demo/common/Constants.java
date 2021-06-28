@@ -54,6 +54,13 @@ public class Constants {
     public static final int SOCKET_MODE_DONT_USE = 0;
     public static final int SOCKET_MODE_SERVER = 1;
     public static final int SOCKET_MODE_CLIENT = 2;
+    public static final int Exception_None = 0;
+    public static final int Exception_Connect = 1;
+    public static final int Exception_Close = 2;
+    public static final int Exception_Server_Close = 3;
+    public static final int Exception_Client_Disconnect = 4;
+    public static final int Exception_EXIT = 5;
+    public static final int MAX_Client = 5;
 
     public static final String APP_SETTINGS_STATUS = "AppSettingStatus";
     public static final String AUTO_DETECT_READERS = "AutoDetectReaders";
